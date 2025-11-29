@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Two Numbers</title>
+</head>
+<body>
+    <h2>Addition Karana hai!!</h2>
+
+    <input type="text" id="num1" placeholder="Enter first number"> <br><br>
+    <input type="text" id="num2" placeholder="Enter second nUmber"> <br><br>
+
+    <button style="background-color: rgb(30, 186, 80);" onclick="add()">Add</button>
+
+
+    <p id="sum"></p>
+<script>
+  function add(){
+    let a = parseFloat(document.getElementById("num1").value);
+    let b = parseFloat(document.getElementById("num2").value);
+
+    let sum = a + b;
+    document.getElementById("sum").innerHTML = "Sum: " + sum;
+  }
+</script>
+
+
+
+</body>
+</html>
+
+

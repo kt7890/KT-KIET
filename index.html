@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Operator Calculator</title>
+</head>
+<body>
+
+  <h3>Basic Calculator (Each Operation Separate)</h3>
+
+  <!-- Addition -->
+  <p>
+    <input id="add1" type="number"> +
+    <input id="add2" type="number">
+    <button onclick="add()">=</button>
+    <span id="resAdd"></span>
+  </p>
+
+  <!-- Subtraction -->
+  <p>
+    <input id="sub1" type="number"> -
+    <input id="sub2" type="number">
+    <button onclick="subtract()">=</button>
+    <span id="resSub"></span>
+  </p>
+
+  <!-- Multiplication -->
+  <p>
+    <input id="mul1" type="number"> ×
+    <input id="mul2" type="number">
+    <button onclick="multiply()">=</button>
+    <span id="resMul"></span>
+  </p>
+
+  <!-- Division -->
+  <p>
+    <input id="div1" type="number"> ÷
+    <input id="div2" type="number">
+    <button onclick="divide()">=</button>
+    <span id="resDiv"></span>
+  </p>
+
+  <!-- Modulus -->
+  <p>
+    <input id="mod1" type="number"> %
+    <input id="mod2" type="number">
+    <button onclick="modulus()">=</button>
+    <span id="resMod"></span>
+  </p>
+
+  <script>
+    function add() {
+      let a = parseFloat(document.getElementById("add1").value);
+      let b = parseFloat(document.getElementById("add2").value);
+      document.getElementById("resAdd").innerHTML = "<b>" + (a + b) + "</b>";
+    }
+
+    function subtract() {
+      let a = parseFloat(document.getElementById("sub1").value);
+      let b = parseFloat(document.getElementById("sub2").value);
+      document.getElementById("resSub").innerHTML = "<b>" + (a - b) + "</b>";
+    }
+
+    function multiply() {
+      let a = parseFloat(document.getElementById("mul1").value);
+      let b = parseFloat(document.getElementById("mul2").value);
+      document.getElementById("resMul").innerHTML = "<b>" + (a * b) + "</b>";
+    }
+
+    function divide() {
+      let a = parseFloat(document.getElementById("div1").value);
+      let b = parseFloat(document.getElementById("div2").value);
+      document.getElementById("resDiv").innerHTML =
+        b !== 0 ? "<b>" + (a / b) + "</b>" : "<b>Cannot divide by zero!</b>";
+    }
+
+    function modulus() {
+      let a = parseFloat(document.getElementById("mod1").value);
+      let b = parseFloat(document.getElementById("mod2").value);
+      document.getElementById("resMod").innerHTML = "<b>" + (a % b) + "</b>";
+    }
+  </script>
+
+</body>
+</html>
